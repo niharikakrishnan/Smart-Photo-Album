@@ -11,7 +11,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 headers = { "Content-Type": "application/json" }
-host = 'search-photos-twu34m6xdkbq5z3ua6ss4ujtye.us-west-2.es.amazonaws.com'
+host = ''
 
 #Setting values to be referenced later in the program
 port = 443
@@ -19,8 +19,8 @@ ssl = True
 certs = True
 service = "es"
 region = 'us-west-2'
-username = "master_user"
-password = "Suits1998*"
+username = ""
+password = ""
 
 #Getting Boto3 credentials creating client
 credentials = boto3.Session().get_credentials()

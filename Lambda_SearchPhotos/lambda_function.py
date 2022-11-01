@@ -14,13 +14,13 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 headers = { "Content-Type": "application/json" }
-host = 'search-photos-twu34m6xdkbq5z3ua6ss4ujtye.us-west-2.es.amazonaws.com'
+host = ''
 region = 'us-west-2'
 lex = boto3.client('lex-runtime', region_name=region)
 
 #Setting values to be referenced later in the program
-username = "master_user"
-password = "Suits1998*"
+username = ""
+password = ""
 
 def lambda_handler(event, context):
     q1 = event["queryStringParameters"]['q']
@@ -45,7 +45,7 @@ def get_labels(query):
     response = lex.post_text(
         botName='Search_Bot',                 
         botAlias='photobot',
-        userId="nk2982",           
+        userId="",           
         inputText=query
     )
     
